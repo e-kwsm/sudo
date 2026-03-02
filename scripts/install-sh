@@ -4,7 +4,7 @@
 ##  $Revision$
 ##  A script to install files and directories.
 
-PROGNAME=`basename $0`
+PROGNAME=$(basename $0)
 
 ##  Paths to programs.  CHOWN, STRIP and WHOAMI are checked below.
 CHOWN=chown
@@ -57,7 +57,7 @@ if test X"${INSTALL_BACKUP}" != X""; then
     BACKUP="${INSTALL_BACKUP}"
 fi
 
-case `${WHOAMI}` in
+case $(${WHOAMI}) in
 root)
     ROOT=true
     ;;
@@ -77,7 +77,7 @@ while ${MORETODO} ; do
 	;;
     X-b*)
 	BACKIT=true
-	BACKUP="`echo \"$1\" | sed 's/^..//'`"
+	BACKUP="$(echo \"$1\" | sed 's/^..//')"
 	;;
     X-c)
 	# backward compatibility
@@ -91,7 +91,7 @@ while ${MORETODO} ; do
 	shift
 	;;
     X-g*)
-	GROUP="`echo \"$1\" | sed 's/^..//'`"
+	GROUP="$(echo \"$1\" | sed 's/^..//')"
 	CHGROUPIT=true
 	;;
     X-G)
@@ -101,7 +101,7 @@ while ${MORETODO} ; do
 	;;
     X-G*)
 	if ${ROOT} ; then
-	    GROUP="`echo \"$1\" | sed 's/^..//'`"
+	    GROUP="$(echo \"$1\" | sed 's/^..//')"
 	    CHGROUPIT=true
 	fi
 	;;
@@ -111,7 +111,7 @@ while ${MORETODO} ; do
 	shift
 	;;
     X-m*)
-	MODE="`echo \"$1\" | sed 's/^..//'`"
+	MODE="$(echo \"$1\" | sed 's/^..//')"
 	CHMODIT=true
 	;;
     X-M)
@@ -120,7 +120,7 @@ while ${MORETODO} ; do
 	shift
 	;;
     X-M*)
-	MODE="`echo \"$1\" | sed 's/^..//'`"
+	MODE="$(echo \"$1\" | sed 's/^..//')"
 	${ROOT} && CHMODIT=true
 	;;
     X-n)
@@ -132,7 +132,7 @@ while ${MORETODO} ; do
 	shift
 	;;
     X-o*)
-	OWNER="`echo \"$1\" | sed 's/^..//'`"
+	OWNER="$(echo \"$1\" | sed 's/^..//')"
 	CHOWNIT=true
 	;;
     X-O)
@@ -142,7 +142,7 @@ while ${MORETODO} ; do
 	;;
     X-O*)
 	if ${ROOT} ; then
-	    OWNER="`echo \"$1\" | sed 's/^..//'`"
+	    OWNER="$(echo \"$1\" | sed 's/^..//')"
 	    CHOWNIT=true
 	fi
 	;;
@@ -193,11 +193,11 @@ fi
 
 ##  Get the destination and a temp file in the destination directory.
 if [ -d "$2" ] ; then
-    DEST="$2/`basename $1`"
+    DEST="$2/$(basename $1)"
     TEMP="$2/$$.tmp"
 else
     DEST="$2"
-    TEMP="`expr "$2" : '\(.*\)/.*'`/$$.tmp"
+    TEMP="$(expr "$2" : '\(.*\)/.*')/$$.tmp"
 fi
 
 ##  If not given the same name, we must try to copy.
