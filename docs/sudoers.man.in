@@ -1416,24 +1416,24 @@ Runas_Spec ::= '(' Runas_User_List? (':' Runas_Group_List)? ')'
 .\}
 
 .if \n(SL \{\
-SELinux_Spec ::= ('ROLE=role' | 'TYPE=type')
+SELinux_Spec ::= ('ROLE=' role | 'TYPE=' type)
 
 .\}
 .if \n(AA \{\
-AppArmor_Spec ::= 'APPARMOR_PROFILE=profile'
+AppArmor_Spec ::= 'APPARMOR_PROFILE=' profile
 
 .\}
 .if \n(PS \{\
-Solaris_Priv_Spec ::= ('PRIVS=privset' | 'LIMITPRIVS=privset')
+Solaris_Priv_Spec ::= ('PRIVS=' privset | 'LIMITPRIVS=' privset)
 
 .\}
-Date_Spec ::= ('NOTBEFORE=timestamp' | 'NOTAFTER=timestamp')
+Date_Spec ::= ('NOTBEFORE=' | 'NOTAFTER=') timestamp
 
-Timeout_Spec ::= 'TIMEOUT=timeout'
+Timeout_Spec ::= 'TIMEOUT=' timeout
 
-Chdir_Spec ::= 'CWD=directory'
+Chdir_Spec ::= 'CWD=' directory
 
-Chroot_Spec ::= 'CHROOT=directory'
+Chroot_Spec ::= 'CHROOT=' directory
 
 Tag_Spec ::= ('EXEC' | 'NOEXEC' | 'FOLLOW' | 'NOFOLLOW' |
               'LOG_INPUT' | 'NOLOG_INPUT' | 'LOG_OUTPUT' |
