@@ -779,7 +779,7 @@ Cmnd_Alias ::= NAME
 
 Cmnd_Alias_Spec ::= Cmnd_Alias '=' Cmnd_List
 
-NAME ::= [A\(enZ]([A\(enZ][0\(en9]_)*
+NAME ::= [A\-Z]([A\-Z][0\-9]_)*
 .Ed
 .Pp
 Each
@@ -1004,8 +1004,8 @@ Also, the host name
 will only match if that is the actual host name, which is usually
 only the case for non-networked systems.
 .Bd -literal
-digest ::= [A\(enFa\(enf0\(en9]+ |
-           [A\(enZa\(enz0\(en9\e+/=]+
+digest ::= [A\-Fa\-f0\-9]+ |
+           [A\-Za\-z0\-9\e+/=]+
 
 Digest_Spec ::= "sha224" ':' digest |
                 "sha256" ':' digest |
