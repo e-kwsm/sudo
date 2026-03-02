@@ -52,7 +52,7 @@ TOUCHIT=true
 DIRMODE=false
 
 # INSTALL_BACKUP is like -b but for use with libtool
-if test X"${INSTALL_BACKUP}" != X""; then
+if test "${INSTALL_BACKUP}" != ""; then
     BACKIT=true
     BACKUP="${INSTALL_BACKUP}"
 fi
@@ -201,7 +201,7 @@ else
 fi
 
 ##  If not given the same name, we must try to copy.
-if [ X"$1" != X"$2" ] ; then
+if [ "$1" != "$2" ] ; then
     if cmp -s "$1" "${DEST}" ; then
 	##  Files are same; touch or not.
 	${TOUCHIT} && touch "${DEST}"

@@ -22,7 +22,7 @@ rm -f "$OUTFILE"
 true > "$OUTFILE"
 
 # HP-UX friendly header/footer for all man pages
-if [ X"$(uname 2>&1)" = X"HP-UX" ]; then
+if [ "$(uname 2>&1)" = "HP-UX" ]; then
     cat >>"$OUTFILE" <<-'EOF'
 	s/^\.TH \("[^"]*"\) \("[^"]*"\) "\([^"]*\)" "\([^"]*\)" \("[^"]*"\)/.TH \1 \2\
 	.ds )H \4\
