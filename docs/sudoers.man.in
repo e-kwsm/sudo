@@ -5737,7 +5737,8 @@ This option is @secure_path_status@ by default.
 syslog
 Syslog facility if syslog is being used for logging (negate to
 disable syslog logging).
-Defaults to @logfac@.
+Defaults to
+\fB@logfac@\fR.
 .sp
 The following syslog facilities are supported:
 \fBauthpriv\fR
@@ -5760,7 +5761,8 @@ syslog_badpri
 .br
 Syslog priority to use when the user is not allowed to run a command or
 when authentication is unsuccessful.
-Defaults to @badpri@.
+Defaults to
+\fB@badpri@\fR.
 .sp
 The following syslog priorities are supported:
 \fBalert\fR,
@@ -5780,7 +5782,8 @@ will disable logging of unsuccessful commands.
 syslog_goodpri
 Syslog priority to use when the user is allowed to run a command and
 authentication is successful.
-Defaults to @goodpri@.
+Defaults to
+\fB@goodpri@\fR.
 .sp
 See
 \fIsyslog_badpri\fR

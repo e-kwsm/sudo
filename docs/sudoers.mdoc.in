@@ -5365,7 +5365,8 @@ This option is @secure_path_status@ by default.
 .It syslog
 Syslog facility if syslog is being used for logging (negate to
 disable syslog logging).
-Defaults to @logfac@.
+Defaults to
+.Sy @logfac@ .
 .Pp
 The following syslog facilities are supported:
 .Sy authpriv
@@ -5386,7 +5387,8 @@ and
 .It syslog_badpri
 Syslog priority to use when the user is not allowed to run a command or
 when authentication is unsuccessful.
-Defaults to @badpri@.
+Defaults to
+.Sy @badpri@ .
 .Pp
 The following syslog priorities are supported:
 .Sy alert ,
@@ -5405,7 +5407,8 @@ will disable logging of unsuccessful commands.
 .It syslog_goodpri
 Syslog priority to use when the user is allowed to run a command and
 authentication is successful.
-Defaults to @goodpri@.
+Defaults to
+.Sy @goodpri@ .
 .Pp
 See
 .Em syslog_badpri
