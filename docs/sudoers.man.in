@@ -865,12 +865,12 @@ User_List ::= User |
               User ',' User_List
 
 User ::= '!'* user name |
-         '!'* #user-ID |
-         '!'* %group |
-         '!'* %#group-ID |
-         '!'* +netgroup |
-         '!'* %:nonunix_group |
-         '!'* %:#nonunix_gid |
+         '!'* '#' user-ID |
+         '!'* '%' group |
+         '!'* '%#' group-ID |
+         '!'* '+' netgroup |
+         '!'* '%:' nonunix_group |
+         '!'* '%:#' nonunix_gid |
          '!'* User_Alias
 .RE
 .fi
@@ -955,12 +955,12 @@ Runas_User_List ::= Runas_User |
                     Runas_User ',' Runas_User_List
 
 Runas_User ::= '!'* user name |
-               '!'* #user-ID |
-               '!'* %group |
-               '!'* %#group-ID |
-               '!'* %:nonunix_group |
-               '!'* %:#nonunix_gid |
-               '!'* +netgroup |
+               '!'* '#' user-ID |
+               '!'* '%' group |
+               '!'* '%#' group-ID |
+               '!'* '%:' nonunix_group |
+               '!'* '%:#' nonunix_gid |
+               '!'* '+' netgroup |
                '!'* Runas_Alias |
                '!'* ALL
 
@@ -968,8 +968,8 @@ Runas_Group_List ::= Runas_Group |
                      Runas_Group ',' Runas_Group_List
 
 Runas_Group ::= '!'* group name |
-                '!'* #group-ID |
-                '!'* +netgroup |
+                '!'* '#' group-ID |
+                '!'* '+' netgroup |
                 '!'* Runas_Alias |
                 '!'* ALL
 .RE
