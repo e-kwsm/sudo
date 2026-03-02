@@ -689,13 +689,13 @@ Resource limits in
 \fBsudoers\fR
 may be specified in one of the following formats:
 .TP 8n
-\(lqvalue\(rq
+\(lq\fIvalue\fR\(rq
 Both the soft and hard resource limits are set to the same value.
 The special value
 \(lqinfinity\(rq
 can be used to indicate that the value is unlimited.
 .TP 8n
-\(lqsoft,hard\(rq
+\(lq\fIsoft\fR,\fIhard\fR\(rq
 Two comma-separated values.
 The soft limit is set to the first value and the hard limit is set
 to the second.
