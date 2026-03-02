@@ -167,29 +167,36 @@ over the years; this version consists of code written primarily by:
 .Pp
 See the CONTRIBUTORS.md file in the
 .Nm sudo
-distribution (https://www.sudo.ws/about/contributors/) for an
-exhaustive list of people who have contributed to
+distribution
+.Pf ( Lk https://www.sudo.ws/about/contributors/ )
+for an exhaustive list of people who have contributed to
 .Nm sudo .
 .Sh BUGS
 If you believe you have found a bug in
 .Nm ,
 you can either file a bug report in the sudo bug database,
-https://bugzilla.sudo.ws/, or open an issue at
-https://github.com/sudo-project/sudo/issues.
+.Lk https://bugzilla.sudo.ws/ ,
+or open an issue at
+.Lk https://github.com/sudo-project/sudo/issues .
 If you would prefer to use email, messages may be sent to the
 sudo-workers mailing list,
-https://www.sudo.ws/mailman/listinfo/sudo-workers (public)
-or <sudo@sudo.ws> (private).
+.Lk https://www.sudo.ws/mailman/listinfo/sudo-workers
+(public) or
+.Mt sudo@sudo.ws
+(private).
 .Pp
 Please do not report security vulnerabilities through public GitHub
 issues, Bugzilla or mailing lists.
-Instead, report them via email to <Todd.Miller@sudo.ws>.
+Instead, report them via email to
+.Mt Todd.Miller@sudo.ws .
 You may encrypt your message with PGP if you would like, using
-the key found at https://www.sudo.ws/dist/PGPKEYS.
+the key found at
+.Lk https://www.sudo.ws/dist/PGPKEYS .
 .Sh SUPPORT
 Limited free support is available via the sudo-users mailing list,
-see https://www.sudo.ws/mailman/listinfo/sudo-users to subscribe or
-search the archives.
+see
+.Lk https://www.sudo.ws/mailman/listinfo/sudo-users
+to subscribe or search the archives.
 .Sh DISCLAIMER
 .Nm
 is provided
@@ -199,4 +206,6 @@ to, the implied warranties of merchantability and fitness for a
 particular purpose are disclaimed.
 See the LICENSE.md file distributed with
 .Nm sudo
-or https://www.sudo.ws/about/license/ for complete details.
+or
+.Lk https://www.sudo.ws/about/license/
+for complete details.
