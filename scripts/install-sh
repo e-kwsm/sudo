@@ -52,7 +52,7 @@ TOUCHIT=true
 DIRMODE=false
 
 # INSTALL_BACKUP is like -b but for use with libtool
-if test "${INSTALL_BACKUP}" != ""; then
+if test -n "${INSTALL_BACKUP}"; then
     BACKIT=true
     BACKUP="${INSTALL_BACKUP}"
 fi
