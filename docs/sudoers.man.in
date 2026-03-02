@@ -1053,10 +1053,7 @@ only the case for non-networked systems.
 digest ::= [A\-Fa\-f0\-9]+ |
            [A\-Za\-z0\-9\e+/=]+
 
-Digest_Spec ::= "sha224" ':' digest |
-                "sha256" ':' digest |
-                "sha384" ':' digest |
-                "sha512" ':' digest
+Digest_Spec ::= ('sha224:' | 'sha256:' | 'sha384:' | 'sha512:') digest
 
 Digest_List ::= Digest_Spec |
                 Digest_Spec ',' Digest_List
