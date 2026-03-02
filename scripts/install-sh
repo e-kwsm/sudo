@@ -31,7 +31,7 @@ for d in /usr/bin /bin /usr/ucb /usr/bsd; do
 	WHOAMI=${d}/whoami
 	break
     elif [ -f $d/id ]; then
-	WHOAMI=${d}/id | sed -n 's/^[^(]*(\([^)]*\)).*/\1/p'
+	WHOAMI=$(${d}/id | sed -n 's/^[^(]*(\([^)]*\)).*/\1/p')
     fi
 done
 
