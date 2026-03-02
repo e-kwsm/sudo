@@ -19,7 +19,7 @@
 
 OUTFILE="$1"
 rm -f "$OUTFILE"
-> "$OUTFILE"
+true > "$OUTFILE"
 
 # HP-UX friendly header/footer for all man pages
 if [ X"$(uname 2>&1)" = X"HP-UX" ]; then
